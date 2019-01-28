@@ -25,6 +25,9 @@ public class ColliderDetector : MonoBehaviour {
     bool isInHome = false;
     bool isInHomeArea = false;
     bool isInAcceptor = false;
+    bool targetReached = false;
+
+    float checkForPauseRate = 0.05f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,6 +35,7 @@ public class ColliderDetector : MonoBehaviour {
         if (other.CompareTag("Target"))
         {
             isInTarget = true;
+            targetReached = true;
         }
 
         else if (other.CompareTag("Home"))
@@ -49,7 +53,7 @@ public class ColliderDetector : MonoBehaviour {
             distanceFromLastList.Clear();
 
 
-            InvokeRepeating("CheckForPause", 0, 0.1f);
+            InvokeRepeating("CheckForPause", 0, checkForPauseRate);
             //Debug.Log("Check For Pause!");
         }
 
@@ -58,7 +62,7 @@ public class ColliderDetector : MonoBehaviour {
             //Debug.Log("is in Acceptor!");
             isInAcceptor = true;
 
-            InvokeRepeating("CheckForPause", 0, 0.1f);
+            InvokeRepeating("CheckForPause", 0, checkForPauseRate);
         }
     }
 
@@ -67,6 +71,7 @@ public class ColliderDetector : MonoBehaviour {
         if (other.CompareTag("HomeArea"))
         {
             isInHomeArea = false;
+            isPaused = false;
 
             lastPosition = transform.position;
 
@@ -74,7 +79,7 @@ public class ColliderDetector : MonoBehaviour {
             distanceFromLastList.Clear();
 
 
-            InvokeRepeating("CheckForPause", 0, 0.1f);
+            InvokeRepeating("CheckForPause", 0, checkForPauseRate);
 
             //start coroutine???
             //StartCoroutine("StartRecordingDistance");
@@ -101,7 +106,7 @@ public class ColliderDetector : MonoBehaviour {
     {
         if (isPaused && isInAcceptor)
         {
-            //TESTING ANIMATION
+            //ANIMATION
             instructionController.ShrinkInstructions();
             instructionController.IsStill();
 
@@ -130,11 +135,18 @@ public class ColliderDetector : MonoBehaviour {
 
                     CancelInvoke("CheckForPause");
 
-                    //make the cursor disappear
-                    GetComponent<MeshRenderer>().enabled = false;
+                    //make the cursor disappear only during clamped trials 
 
-                    //start the next trial
-                    exampleController.EndAndPrepare();
+                    //if (exampleController.trialType.Contains("clamped") && gameObject.name != "Clamped Cursor")
+                    //{
+                    //    GetComponent<MeshRenderer>().enabled = false;
+                    //}
+
+                    //Destroy old target 
+                    targetHolderController.DestroyTarget();
+
+                    //Create homeposition
+                    homePosition.SetActive(true);
                 }
 
                 if (isPaused && isInHome && exampleController.isDoneInstruction)
@@ -143,23 +155,35 @@ public class ColliderDetector : MonoBehaviour {
                     homePosition.SetActive(false);
 
                     isInHome = false;
-                    isPaused = false;
+                    //isPaused = false;
 
                     CancelInvoke("CheckForPause");
 
                     //make the cursor reappear
-                    GetComponent<MeshRenderer>().enabled = true;
+                    //GetComponent<MeshRenderer>().enabled = true;
 
-                    //Create target
-                    //randomize location of target
+                    //Create random target
                     //Vector3 newTargetPosition = new Vector3(UnityEngine.Random.Range(-0.25f, 0.25f), 0.7f, UnityEngine.Random.Range(0.35f, 0.45f));
                     //Quaternion targetRotation = new Quaternion(0, 0, 0, 0);
                     //Instantiate(target, exampleController.targetPosition, targetRotation);
 
-                    targetHolderController.InstantiateTarget();
+                    //instantiate target
+                    //targetHolderController.InstantiateTarget();
 
-                    //enable the tracker script (for the reach to target)
-                    trackerHolderObject.GetComponent<PositionRotationTracker>().enabled = true;
+                    if (targetReached)
+                    {
+                        targetReached = false;
+                        //start the next trial
+                        exampleController.EndAndPrepare();
+                    }
+                    else
+                    {
+                        //Create TARGET
+                        targetHolderController.InstantiateTarget();
+
+                        //enable the tracker script (for the reach to target)
+                        trackerHolderObject.GetComponent<PositionRotationTracker>().enabled = true;
+                    }
                 }
             }
 
@@ -181,8 +205,11 @@ public class ColliderDetector : MonoBehaviour {
                     //make the cursor disappear
                     GetComponent<MeshRenderer>().enabled = false;
 
-                    //start the next trial
-                    exampleController.EndAndPrepare();
+                    //Destroy old target 
+                    targetHolderController.DestroyTarget();
+
+                    //Create homeposition
+                    homePosition.SetActive(true);
                 }
 
                 if (isInHome && isPaused && exampleController.isDoneInstruction)
@@ -191,23 +218,33 @@ public class ColliderDetector : MonoBehaviour {
                     homePosition.SetActive(false);
 
                     isInHome = false;
-                    isPaused = false;
+                    //isPaused = false;
 
                     CancelInvoke("CheckForPause");
 
                     //make the cursor stay invisible
                     GetComponent<MeshRenderer>().enabled = false;
 
-                    //Create target
+                    //Create random target
                     //randomize location of target
                     //Vector3 newTargetPosition = new Vector3(UnityEngine.Random.Range(-0.25f, 0.25f), 0.7f, UnityEngine.Random.Range(0.35f, 0.45f));
                     //Quaternion targetRotation = new Quaternion(0, 0, 0, 0);
                     //Instantiate(target, exampleController.targetPosition, targetRotation);
+        
+                    if (targetReached)
+                    {
+                        targetReached = false;
+                        //start the next trial
+                        exampleController.EndAndPrepare();
+                    }
+                    else
+                    {
+                        //Create TARGET
+                        targetHolderController.InstantiateTarget();
 
-                    targetHolderController.InstantiateTarget();
-
-                    //enable the tracker script (for the reach to target)
-                    trackerHolderObject.GetComponent<PositionRotationTracker>().enabled = true;
+                        //enable the tracker script (for the reach to target)
+                        trackerHolderObject.GetComponent<PositionRotationTracker>().enabled = true;
+                    }
                 }
             }
         }
@@ -244,7 +281,7 @@ public class ColliderDetector : MonoBehaviour {
         //replace lastPosition withh the current position
         lastPosition = transform.position;
 
-        if(distanceMean < 0.01)
+        if(distanceMean < 0.001)
         {
             isPaused = true;
         }
@@ -253,4 +290,9 @@ public class ColliderDetector : MonoBehaviour {
             isPaused = false;
         }
     }
+
+    //private void Start()
+    //{
+    //    Debug.Log(gameObject.name);
+    //}
 }

@@ -271,7 +271,7 @@ public class ExampleController : MonoBehaviour {
             handCursorObject.SetActive(false);
             
             clampedHandCursorObject.SetActive(true);
-            clampedHandCursorObject.GetComponent<MeshRenderer>().enabled = false;
+            //clampedHandCursorObject.GetComponent<MeshRenderer>().enabled = false;
             //print("setting clamped to active");
         }
         else
@@ -283,12 +283,11 @@ public class ExampleController : MonoBehaviour {
 
         //set the rotation for this trial
 
-        
+        // first check if this is a gradual rotation block
         if (Convert.ToBoolean(trial.settings["is_gradual"]) && trial.numberInBlock <= Math.Abs((Convert.ToSingle(trial.settings["rotation"]))))
         {
             // add gradualStep if positive, subtract if negative
             rotationAngle = (trial.numberInBlock - 1) * gradualStep * Math.Sign(Convert.ToSingle(trial.settings["rotation"]));
-            Debug.Log("if statement works for this trial");
         } 
         else
         {
@@ -296,10 +295,6 @@ public class ExampleController : MonoBehaviour {
         }
         rotatorObject.transform.rotation = Quaternion.Euler(0, rotationAngle, 0);
         Debug.Log(rotationAngle);
-
-
-        //Create homeposition
-        homePositionObject.SetActive(true);
 
         // explicitly convert settings["visible_cursor"] to a boolean for if statement
         // this is just to save in the trial by trial csv
@@ -312,8 +307,11 @@ public class ExampleController : MonoBehaviour {
         //add these things to the trial_results csv (per trial)
         trial.result["trial_type"] = trial.settings["trial_type"];
         trial.result["cursor_visibility"] = trial.settings["visible_cursor"];
-        trial.result["rotation"] = trial.settings["rotation"];
+        trial.result["rotation"] = rotationAngle;
         trial.result["target_angle"] = targetLocation;
+
+        //Create homeposition
+        homePositionObject.SetActive(true);
     }
 
     private void Update()
@@ -333,9 +331,6 @@ public class ExampleController : MonoBehaviour {
     public void EndAndPrepare()
     {
         //Debug.Log("ending reach trial...");
-
-        //Destroy old target
-        targetHolderController.DestroyTarget();
 
         session.currentTrial.End();
 
