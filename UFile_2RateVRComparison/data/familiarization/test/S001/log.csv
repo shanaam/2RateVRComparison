@@ -1,0 +1,27 @@
+timestamp,log_type,message
+0.02,Warning,"A Canvas named ""[UXF_UI]"" with a render mode of ScreenSpaceOverlay is being used while VR is also enabled. This Canvas will continue to incur a rendering cost but will not be visible while in VR. Is this intentional?"
+90.7019,Log,Loaded: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_familiarization.csv
+93.45533,Log,Updating: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_familiarization.csv
+100.8677,Warning,Warning: Session already exists! Continuing will overwrite
+100.8677,Log,show instruction = true  expanding
+100.8677,Log,0
+154.8002,Log,0
+159.5004,Log,show instruction = false  doing nothing
+159.5004,Log,0
+163.0448,Log,0
+166.4008,Log,show instruction = false  doing nothing
+166.4008,Log,0
+169.9006,Log,0
+174.1005,Log,0
+178.0897,Log,0
+181.423,Log,show instruction = false  doing nothing
+181.423,Log,0
+196.0787,Log,0
+203.5342,Log,0
+207.6453,Log,0
+210.9903,Log,0
+213.5456,Log,0
+216.2344,Log,0
+218.712,Log,0
+221.19,Log,show instruction = true  expanding
+221.19,Log,0
