@@ -1,12 +1,33 @@
 timestamp,log_type,message
 0.02,Warning,"A Canvas named ""[UXF_UI]"" with a render mode of ScreenSpaceOverlay is being used while VR is also enabled. This Canvas will continue to incur a rendering cost but will not be visible while in VR. Is this intentional?"
-3.154939,Log,Loaded: D:\shanaa\repos\unity-reachTarget3D-template\UFile_reachToTargetTemplate\data\participant_list_testing.csv
-7.046432,Log,Loaded: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_testing.csv
-11.62982,Log,Updating: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_testing.csv
-12.51961,Warning,Warning: Session already exists! Continuing will overwrite
-12.51961,Log,WARNING: Check your trial settings for target positions and numbers
-12.51961,Log,show instruction = true  expanding
-12.51961,Log,0
-32.24963,Log,0
-34.88316,Log,0
-37.5274,Log,0
+5.342297,Log,Loaded: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_testing.csv
+7.584018,Log,Updating: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_testing.csv
+8.327918,Warning,Warning: Session already exists! Continuing will overwrite
+8.327918,Log,show instruction = true  expanding
+8.327918,Log,0
+26.48298,Log,0
+28.72642,Log,show instruction = false  doing nothing
+28.72642,Log,0
+31.07102,Log,1
+36.15996,Log,2
+39.02659,Log,3
+41.24889,Log,show instruction = false  doing nothing
+41.24889,Log,30
+43.73782,Log,30
+45.99344,Log,show instruction = false  doing nothing
+45.99344,Log,0
+49.51577,Log,0
+51.98302,Log,show instruction = true  expanding
+51.98302,Log,0
+58.2495,Log,0
+60.62702,Log,show instruction = false  doing nothing
+60.62702,Log,30
+63.01612,Log,30
+65.47173,Log,30
+67.80458,Log,30
+70.13847,Log,show instruction = false  doing nothing
+70.13847,Log,-30
+73.11639,Log,-30
+75.29408,Log,show instruction = false  doing nothing
+75.29408,Log,0
+78.30553,Log,0

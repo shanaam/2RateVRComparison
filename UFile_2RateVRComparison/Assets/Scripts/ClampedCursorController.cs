@@ -20,6 +20,7 @@ public class ClampedCursorController : MonoBehaviour {
 
         GameObject target = GameObject.FindGameObjectWithTag("Target");
 
+        // if a target exists
         if (target != null)
         {
             Vector3 targetPosition = target.transform.position;
@@ -37,6 +38,9 @@ public class ClampedCursorController : MonoBehaviour {
             Vector3 normalVector = Vector3.Cross(targetPosition - rotatorObjectPosition, vectorForPlane - rotatorObjectPosition);
 
             transform.localPosition = Vector3.ProjectOnPlane(realHandPosition - rotatorObjectPosition, normalVector);
+
+            // make the clamped cursor visible (happens every frame though.. this is not good
+            GetComponent<MeshRenderer>().enabled = true;
         }
 
         else
@@ -45,6 +49,7 @@ public class ClampedCursorController : MonoBehaviour {
             Vector3 rotatorObjectPosition = transform.parent.transform.position;
 
             transform.localPosition = realHandPosition - rotatorObjectPosition;
+            GetComponent<MeshRenderer>().enabled = false;
         }
 	}
 }
