@@ -1,21 +1,21 @@
 directory,experiment,ppid,session_num,trial_num,block_num,trial_num_in_block,start_time,end_time,test_to_log,cursor_visibility,rotation,trial_type,target_angle,example_object_movement_filename
-familiarization/test/S001,familiarization,test,1,1,1,1,100.8677,154.8002,familarization,True,0,aligned_1,140,example_object_movement_T001.csv
-familiarization/test/S001,familiarization,test,1,2,1,2,154.8002,159.5004,familarization,True,0,aligned_1,130,example_object_movement_T002.csv
-familiarization/test/S001,familiarization,test,1,3,2,1,159.5004,163.0448,familarization,True,0,rotated_1_1,140,example_object_movement_T003.csv
-familiarization/test/S001,familiarization,test,1,4,2,2,163.0448,166.4008,familarization,True,0,rotated_1_1,130,example_object_movement_T004.csv
-familiarization/test/S001,familiarization,test,1,5,3,1,166.4008,169.9006,familarization,True,0,rotated_1_2,130,example_object_movement_T005.csv
-familiarization/test/S001,familiarization,test,1,6,3,2,169.9006,174.1005,familarization,True,0,rotated_1_2,140,example_object_movement_T006.csv
-familiarization/test/S001,familiarization,test,1,7,3,3,174.1005,178.0897,familarization,True,0,rotated_1_2,130,example_object_movement_T007.csv
-familiarization/test/S001,familiarization,test,1,8,3,4,178.0897,181.423,familarization,True,0,rotated_1_2,140,example_object_movement_T008.csv
-familiarization/test/S001,familiarization,test,1,9,4,1,181.423,196.0787,familarization,False,0,clamped_1,130,example_object_movement_T009.csv
-familiarization/test/S001,familiarization,test,1,10,4,2,196.0787,203.5342,familarization,False,0,clamped_1,140,example_object_movement_T010.csv
-familiarization/test/S001,familiarization,test,1,11,4,3,203.5342,207.6453,familarization,False,0,clamped_1,130,example_object_movement_T011.csv
-familiarization/test/S001,familiarization,test,1,12,4,4,207.6453,210.9903,familarization,False,0,clamped_1,140,example_object_movement_T012.csv
-familiarization/test/S001,familiarization,test,1,13,4,5,210.9903,213.5456,familarization,False,0,clamped_1,140,example_object_movement_T013.csv
-familiarization/test/S001,familiarization,test,1,14,4,6,213.5456,216.2344,familarization,False,0,clamped_1,130,example_object_movement_T014.csv
-familiarization/test/S001,familiarization,test,1,15,4,7,216.2344,218.712,familarization,False,0,clamped_1,130,example_object_movement_T015.csv
-familiarization/test/S001,familiarization,test,1,16,4,8,218.712,221.19,familarization,False,0,clamped_1,140,example_object_movement_T016.csv
-familiarization/test/S001,familiarization,test,1,17,5,1,221.19,298.8484,familarization,True,0,aligned_2,50,example_object_movement_T017.csv
+familiarization/test/S001,familiarization,test,1,1,1,1,8.601811,65.94601,familarization,True,0,aligned_1,140,example_object_movement_T001.csv
+familiarization/test/S001,familiarization,test,1,2,1,2,65.94601,71.76814,familarization,True,0,aligned_1,130,example_object_movement_T002.csv
+familiarization/test/S001,familiarization,test,1,3,2,1,71.76814,75.39047,familarization,True,0,rotated_1_1,140,example_object_movement_T003.csv
+familiarization/test/S001,familiarization,test,1,4,2,2,75.39047,81.50191,familarization,True,0,rotated_1_1,130,example_object_movement_T004.csv
+familiarization/test/S001,familiarization,test,1,5,3,1,81.50191,85.61317,familarization,True,0,rotated_1_2,140,example_object_movement_T005.csv
+familiarization/test/S001,familiarization,test,1,6,3,2,85.61317,89.6572,familarization,True,0,rotated_1_2,130,example_object_movement_T006.csv
+familiarization/test/S001,familiarization,test,1,7,3,3,89.6572,93.64644,familarization,True,0,rotated_1_2,130,example_object_movement_T007.csv
+familiarization/test/S001,familiarization,test,1,8,3,4,93.64644,96.81325,familarization,True,0,rotated_1_2,140,example_object_movement_T008.csv
+familiarization/test/S001,familiarization,test,1,9,4,1,96.81325,103.0795,familarization,False,0,clamped_1,130,example_object_movement_T009.csv
+familiarization/test/S001,familiarization,test,1,10,4,2,103.0795,107.2021,familarization,False,0,clamped_1,140,example_object_movement_T010.csv
+familiarization/test/S001,familiarization,test,1,11,4,3,107.2021,110.4801,familarization,False,0,clamped_1,140,example_object_movement_T011.csv
+familiarization/test/S001,familiarization,test,1,12,4,4,110.4801,115.3245,familarization,False,0,clamped_1,130,example_object_movement_T012.csv
+familiarization/test/S001,familiarization,test,1,13,4,5,115.3245,118.0467,familarization,False,0,clamped_1,130,example_object_movement_T013.csv
+familiarization/test/S001,familiarization,test,1,14,4,6,118.0467,121.7357,familarization,False,0,clamped_1,140,example_object_movement_T014.csv
+familiarization/test/S001,familiarization,test,1,15,4,7,121.7357,125.0248,familarization,False,0,clamped_1,130,example_object_movement_T015.csv
+familiarization/test/S001,familiarization,test,1,16,4,8,125.0248,127.936,familarization,False,0,clamped_1,140,example_object_movement_T016.csv
+familiarization/test/S001,familiarization,test,1,17,5,1,127.936,138.8708,familarization,True,0,aligned_2,50,example_object_movement_T017.csv
 
 
 

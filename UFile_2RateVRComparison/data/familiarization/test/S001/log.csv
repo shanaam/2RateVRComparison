@@ -1,27 +1,27 @@
 timestamp,log_type,message
 0.02,Warning,"A Canvas named ""[UXF_UI]"" with a render mode of ScreenSpaceOverlay is being used while VR is also enabled. This Canvas will continue to incur a rendering cost but will not be visible while in VR. Is this intentional?"
-90.7019,Log,Loaded: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_familiarization.csv
-93.45533,Log,Updating: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_familiarization.csv
-100.8677,Warning,Warning: Session already exists! Continuing will overwrite
-100.8677,Log,show instruction = true  expanding
-100.8677,Log,0
-154.8002,Log,0
-159.5004,Log,show instruction = false  doing nothing
-159.5004,Log,0
-163.0448,Log,0
-166.4008,Log,show instruction = false  doing nothing
-166.4008,Log,0
-169.9006,Log,0
-174.1005,Log,0
-178.0897,Log,0
-181.423,Log,show instruction = false  doing nothing
-181.423,Log,0
-196.0787,Log,0
-203.5342,Log,0
-207.6453,Log,0
-210.9903,Log,0
-213.5456,Log,0
-216.2344,Log,0
-218.712,Log,0
-221.19,Log,show instruction = true  expanding
-221.19,Log,0
+3.986623,Log,Loaded: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_familiarization.csv
+6.479136,Log,Updating: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_familiarization.csv
+8.601811,Warning,Warning: Session already exists! Continuing will overwrite
+8.601811,Log,show instruction = true  expanding
+8.601811,Log,0
+65.94601,Log,0
+71.76814,Log,show instruction = false  doing nothing
+71.76814,Log,0
+75.39047,Log,0
+81.50191,Log,show instruction = false  doing nothing
+81.50191,Log,0
+85.61317,Log,0
+89.6572,Log,0
+93.64644,Log,0
+96.81325,Log,show instruction = false  doing nothing
+96.81325,Log,0
+103.0795,Log,0
+107.2021,Log,0
+110.4801,Log,0
+115.3245,Log,0
+118.0467,Log,0
+121.7357,Log,0
+125.0248,Log,0
+127.936,Log,show instruction = true  expanding
+127.936,Log,0
