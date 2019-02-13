@@ -29,7 +29,7 @@ public class ExampleController : MonoBehaviour {
     List<int> targetList_1 = new List<int>();
     List<int> targetList_2 = new List<int>();
     List<int> shuffledTargetList = new List<int>();
-    int gradualStep;
+    float gradualStep;
     float rotationAngle;                                     //used to set rotation in EACH trial
 
     //GENERATE TRIALS AND BLOCK!!!
@@ -54,7 +54,7 @@ public class ExampleController : MonoBehaviour {
         float rotationSize2_1 = Convert.ToInt32(session.settings["rotation_2_1"]);
         float rotationSize2_2 = Convert.ToInt32(session.settings["rotation_2_2"]);
 
-        gradualStep = Convert.ToInt32(session.settings["gradual_step"]);
+        gradualStep = (float)Convert.ToDouble(session.settings["gradual_step"]);
 
         //makes the blocks and trials!
         //first grab the settings to figure out trial numbers and make the first BLOCK
@@ -74,7 +74,7 @@ public class ExampleController : MonoBehaviour {
         Block rotatedReachBlock1_1 = session.CreateBlock(numRotatedTrials1_1);
         rotatedReachBlock1_1.settings["trial_type"] = "rotated_1_1";
         rotatedReachBlock1_1.settings["visible_cursor"] = true;
-        rotatedReachBlock1_1.settings["rotation"] = rotationSize1_2;
+        rotatedReachBlock1_1.settings["rotation"] = rotationSize1_1;
         rotatedReachBlock1_1.settings["show_instruction"] = false;
         rotatedReachBlock1_1.settings["instruction_text"] = "Reach to the Target";
         rotatedReachBlock1_1.settings["is_gradual"] = isGradual1_1;

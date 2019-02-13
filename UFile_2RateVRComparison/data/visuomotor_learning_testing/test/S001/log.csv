@@ -1,33 +1,33 @@
 timestamp,log_type,message
 0.02,Warning,"A Canvas named ""[UXF_UI]"" with a render mode of ScreenSpaceOverlay is being used while VR is also enabled. This Canvas will continue to incur a rendering cost but will not be visible while in VR. Is this intentional?"
-13.60666,Log,Loaded: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_testing.csv
-17.0091,Log,Updating: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_testing.csv
-18.64763,Warning,Warning: Session already exists! Continuing will overwrite
-18.64763,Log,show instruction = true  expanding
-18.64763,Log,0
-78.27888,Log,0
-81.02373,Log,show instruction = false  doing nothing
-81.02373,Log,0
-83.65688,Log,1
-86.17922,Log,2
-88.97915,Log,3
-93.32361,Log,show instruction = false  doing nothing
-93.32361,Log,30
-95.75678,Log,30
-99.81291,Log,show instruction = false  doing nothing
-99.81291,Log,0
-112.9908,Log,0
-115.1574,Log,show instruction = true  expanding
-115.1574,Log,0
-128.057,Log,0
-132.3136,Log,show instruction = false  doing nothing
-132.3136,Log,30
-139.1019,Log,30
-142.0354,Log,30
-144.7574,Log,30
-148.1912,Log,show instruction = false  doing nothing
-148.1912,Log,-30
-163.1134,Log,-30
-166.2911,Log,show instruction = false  doing nothing
-166.2911,Log,0
-171.3137,Log,0
+7.826622,Log,Loaded: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_testing.csv
+12.07774,Log,Updating: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_testing.csv
+13.23754,Warning,Warning: Session already exists! Continuing will overwrite
+13.23754,Log,show instruction = true  expanding
+13.23754,Log,0
+45.13862,Log,0
+47.5391,Log,show instruction = false  doing nothing
+47.5391,Log,0
+51.75047,Log,-4.25
+54.40621,Log,-8.5
+56.90601,Log,-12.75
+59.83957,Log,show instruction = false  doing nothing
+59.83957,Log,30
+62.75064,Log,30
+65.22861,Log,show instruction = false  doing nothing
+65.22861,Log,0
+67.85078,Log,0
+70.09535,Log,show instruction = true  expanding
+70.09535,Log,0
+76.97308,Log,0
+79.40662,Log,show instruction = false  doing nothing
+79.40662,Log,30
+81.87331,Log,30
+84.39538,Log,30
+87.0956,Log,30
+89.57319,Log,show instruction = false  doing nothing
+89.57319,Log,-30
+93.59557,Log,-30
+96.67338,Log,show instruction = false  doing nothing
+96.67338,Log,0
+101.8735,Log,0
