@@ -1,27 +1,43 @@
 timestamp,log_type,message
 0.02,Warning,"A Canvas named ""[UXF_UI]"" with a render mode of ScreenSpaceOverlay is being used while VR is also enabled. This Canvas will continue to incur a rendering cost but will not be visible while in VR. Is this intentional?"
-3.986623,Log,Loaded: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_familiarization.csv
-6.479136,Log,Updating: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_familiarization.csv
-8.601811,Warning,Warning: Session already exists! Continuing will overwrite
-8.601811,Log,show instruction = true  expanding
-8.601811,Log,0
-65.94601,Log,0
-71.76814,Log,show instruction = false  doing nothing
-71.76814,Log,0
-75.39047,Log,0
-81.50191,Log,show instruction = false  doing nothing
-81.50191,Log,0
-85.61317,Log,0
-89.6572,Log,0
-93.64644,Log,0
-96.81325,Log,show instruction = false  doing nothing
-96.81325,Log,0
-103.0795,Log,0
-107.2021,Log,0
-110.4801,Log,0
-115.3245,Log,0
-118.0467,Log,0
-121.7357,Log,0
-125.0248,Log,0
-127.936,Log,show instruction = true  expanding
-127.936,Log,0
+3.377294,Log,Loaded: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_familiarization.csv
+6.281152,Log,Updating: D:\shanaa\repos\unity-2RateVRComparison\UFile_2RateVRComparison\data\participant_list_familiarization.csv
+7.516545,Warning,Warning: Session already exists! Continuing will overwrite
+7.516545,Log,show instruction = true  expanding
+7.516545,Log,0
+59.95845,Log,0
+62.72515,Log,show instruction = false  doing nothing
+62.72515,Log,0
+65.28078,Log,0
+68.0808,Log,show instruction = false  doing nothing
+68.0808,Log,0
+70.64748,Log,0
+74.44754,Log,0
+102.0924,Log,0
+113.0703,Log,show instruction = false  doing nothing
+113.0703,Log,0
+118.0483,Log,0
+121.3149,Log,0
+124.3818,Log,0
+126.8701,Log,0
+129.1927,Log,0
+131.9927,Log,0
+159.7372,Log,0
+164.4264,Log,show instruction = true  expanding
+164.4264,Log,0
+214.6827,Log,0
+217.6493,Log,show instruction = false  doing nothing
+217.6493,Log,0
+220.4048,Log,0
+223.516,Log,show instruction = false  doing nothing
+223.516,Log,0
+229.5827,Log,0
+234.1164,Log,0
+236.7605,Log,0
+242.8054,Log,show instruction = false  doing nothing
+242.8054,Log,0
+245.9607,Log,0
+249.8606,Log,0
+254.0052,Log,0
+257.6831,Log,0
+261.9275,Log,0
