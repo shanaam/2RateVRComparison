@@ -14,6 +14,7 @@ public class ColliderDetector : MonoBehaviour {
     public GameObject target;
     public GameObject trackerHolderObject;
     public GameObject homePosition;
+    public GameObject returnHelper;
 
     //for pausing to end trial
     //make list
@@ -55,6 +56,15 @@ public class ColliderDetector : MonoBehaviour {
 
             InvokeRepeating("CheckForPause", 0, checkForPauseRate);
             //Debug.Log("Check For Pause!");
+
+            // Activate return helper for clamped and no cursor trials
+            if (exampleController.trialType.Contains("no_cursor") || exampleController.trialType.Contains("clamped"))
+            {
+                if (targetReached)
+                {
+                    returnHelper.SetActive(true);
+                }
+            }
         }
 
         else if (other.CompareTag("InstructionAcceptor"))
@@ -83,6 +93,9 @@ public class ColliderDetector : MonoBehaviour {
 
             //start coroutine???
             //StartCoroutine("StartRecordingDistance");
+
+            // Deactivate return helper after clamped and no cursor trials
+            returnHelper.SetActive(false);
         }
 
         else if (other.CompareTag("Target"))

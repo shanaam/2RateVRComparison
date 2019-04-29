@@ -19,6 +19,7 @@ public class ExampleController : MonoBehaviour {
     public GameObject trackerHolderObject;
     public GameObject rotatorObject;
     public GameObject targetHolder;
+    public GameObject returnHelper;
     public TargetHolderController targetHolderController;
     public InstructionController instructionController;
 
@@ -49,10 +50,10 @@ public class ExampleController : MonoBehaviour {
 
         //after I do _________ ExperimentSession.settings will have all the settings in the JSON file
 
-        float rotationSize1_1 = Convert.ToInt32(session.settings["rotation_1_1"]);
-        float rotationSize1_2 = Convert.ToInt32(session.settings["rotation_1_2"]);
-        float rotationSize2_1 = Convert.ToInt32(session.settings["rotation_2_1"]);
-        float rotationSize2_2 = Convert.ToInt32(session.settings["rotation_2_2"]);
+        float rotationSize1_1 = (float)Convert.ToDouble(session.settings["rotation_1_1"]);
+        float rotationSize1_2 = (float)Convert.ToDouble(session.settings["rotation_1_2"]);
+        float rotationSize2_1 = (float)Convert.ToDouble(session.settings["rotation_2_1"]);
+        float rotationSize2_2 = (float)Convert.ToDouble(session.settings["rotation_2_2"]);
 
         gradualStep = (float)Convert.ToDouble(session.settings["gradual_step"]);
 
@@ -312,6 +313,9 @@ public class ExampleController : MonoBehaviour {
 
         //Create homeposition
         homePositionObject.SetActive(true);
+
+        // turn off returnHelper
+        returnHelper.SetActive(false);
     }
 
     private void Update()
